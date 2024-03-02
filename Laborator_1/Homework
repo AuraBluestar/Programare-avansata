@@ -1,1 +1,34 @@
-L
+package obllab1;
+
+public class Homework1 {
+
+    public static void main(String[] args) 
+    {
+        int a, b, k, cn, aux;
+        //a = Integer.parseInt(args[0]);
+        //b = Integer.parseInt(args[1]);
+        //k = Integer.parseInt(args[2]);
+        a=100; b=200; k=1;
+        for(int i=a; i<=b; i++)
+        {
+            //System.out.println(i);
+            cn =i;
+            while (cn > 9) 
+            {
+                aux =0;
+                while (cn != 0) 
+                {
+                    aux += Math.pow(cn%10, 2);
+                    cn /= 10;
+                }
+                cn=aux;
+                
+            }
+            if(cn==k)
+                System.out.println(i);
+        }
+        //System.out.println(k);
+    }
+
+}
+
