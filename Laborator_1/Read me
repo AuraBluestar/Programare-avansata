@@ -1,0 +1,9 @@
+pentru HOMEWORK am facut:
+A number is k-reductible if it can be reduced to the value k by adding each of its digits, multiplied by itself, repeatedly. For example 13 is 1-reductible since 1*1 + 3*3 = 10 and 1*1 + 0*0=1.
+Write a program that finds all k-reductible numbers in a given interval [a,b]. The values a,b,k are given as command line argumens. Validate them.
+Create a String that contains the identified numbers and display it on the screen.
+Display the running time of the application in nanoseconds or milliseconds.
+
+pentru BONUS:
+Create the adjacency matrix of a wheel graph Wn.
+Display on the screen a textual representation of the matrix.
