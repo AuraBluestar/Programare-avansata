@@ -1,0 +1,5 @@
+Din tema am facut:
+* Create classes that describe the problem and its solution.
+* Override the equals method from the Object class for the Depot, Vehicle, Client classes. The problem should not allow adding the same depot, vehicle or client twice.
+Vehicles may be of different types. Create dedicated classes for trucks and drones. Trucks have a capacity property, while drones have a maximum flight duration (these properties will not be used by the algorithms). The Vehicle class will become abstract.
+* Implement the method getVehicles in the Problem class, returning an array of all the vehicles, from all depots.
