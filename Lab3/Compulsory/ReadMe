@@ -1,0 +1,4 @@
+Create an object-oriented model of the problem. You should have at least the following classes Trip, Statue, Church, Concert. The natural ordering of their objects is given by their names.
+Create the interfaces Visitable and Payable. The classes above must implement these interfaces accordingly.
+The Trip class will contain the name of the city, the period of time and the List of attractions.
+Create at least one object of each class.
