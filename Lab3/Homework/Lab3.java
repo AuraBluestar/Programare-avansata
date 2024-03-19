@@ -16,26 +16,27 @@ public class Lab3 {
         statue.setOpening(LocalTime.MIN);
         Trip trip = new Trip("Iasi", LocalDate.MIN, LocalDate.MAX);*/
 
- //Visitable[] arr = {church, statue, concert};
- 
-  // Crearea planului de călătorie
+        
+        
+        
         TravelPlan travelPlan = new TravelPlan();
 
-        // Adăugarea vizitelor la planul de călătorie
         Location church = new Church();
-        church.setName("St Patrik");
+        church.setName("Catedrala St Patrik");
         Location statue = new Statue();
-        statue.setName("Stefan cel Mare pe cal");
-        Attraction concert = new Concert(LocalTime.of(19, 0), LocalTime.of(22, 0), LocalDate.of(2024, 3, 15));
+        statue.setName("statuia lui Stefan cel Mare pe cal");
+        Location monument = new Statue();
+        monument.setName("Ateneul Roman");
 
         LocalDate date1 = LocalDate.of(2024, 3, 15);
-        LocalDate date2 = LocalDate.of(2024, 3, 16);
+        LocalDate date2 = LocalDate.of(2024, 3, 16);  
+        church.setOpening(LocalTime.of(10,52,06));
+        monument.setOpening(LocalTime.of(8, 0));
 
         travelPlan.addVisit(church, date1);
         travelPlan.addVisit(statue, date2);
-        //travelPlan.addVisit(concert, date2);
+        travelPlan.addVisit(monument, date2);
 
-        // Afișarea planului de călătorie
         travelPlan.displayTravelPlan();
  
 }
