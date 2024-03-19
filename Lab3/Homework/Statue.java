@@ -31,10 +31,12 @@ public class Statue extends Location implements Visitable {
         this.date = date;
     }
 
+    @Override
     public void setOpening(LocalTime opening) {
         this.opening = opening;
     }
 
+    @Override
     public void setClosing(LocalTime closing) {
         this.closing = closing;
     }
