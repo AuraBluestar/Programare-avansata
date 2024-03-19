@@ -16,4 +16,6 @@ public abstract class Location {
     public abstract boolean isVisitable(LocalDate date);
     public abstract LocalTime getOpeningHour(LocalDate date);
     public abstract LocalTime getClosingHour(LocalDate date);
+    public abstract void setOpening(LocalTime time);
+    public abstract void setClosing(LocalTime time);
 }
