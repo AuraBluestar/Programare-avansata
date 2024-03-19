@@ -1,23 +1,23 @@
 package lab3.lab3;
 
-public class Attraction implements Comparable<Attraction> {
+import java.time.LocalDate;
+
+public abstract class Attraction implements Comparable<Attraction> {
 
     private String name;
 
-    /*public Attraction(String name, String Type) {
-        this.name = name;
-        this.type=type;
-    }
-*/
     public Attraction() {
     }
-    
-    
+
+    public abstract boolean isPayable();
+
+    public abstract boolean isVisitable(LocalDate date);
+
     @Override
     public int compareTo(Attraction other) {
         //if(name==null)
         return this.name.compareTo(other.name);
-        
+
     }
 
     public String getName() {
@@ -27,6 +27,5 @@ public class Attraction implements Comparable<Attraction> {
     public void setName(String name) {
         this.name = name;
     }
-    
 
 }
