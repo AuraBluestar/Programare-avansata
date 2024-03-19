@@ -7,8 +7,8 @@ import java.util.Map;
 public class Concert extends Attraction implements Visitable, Payable {
 
     public double ticketPrice = 0;
-    private LocalTime closing, opening;
-    private LocalDate date;
+    private final LocalTime closing, opening;
+    private final LocalDate date;
     private final boolean visitable = true, payable = true;
 
     private Map<LocalDate, TimeInterval> timetable;
@@ -31,11 +31,13 @@ public class Concert extends Attraction implements Visitable, Payable {
         return timetable;
     }
 
-    private boolean isPayable() {
+    @Override
+    public boolean isPayable() {
         return payable;
     }
 
-    private boolean isVisitable(LocalDate date) {
+    @Override
+    public boolean isVisitable(LocalDate date) {
         if(date==this.date)
             return visitable;
         else return false;
