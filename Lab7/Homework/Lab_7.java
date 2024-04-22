@@ -14,9 +14,9 @@ public class Lab_7 {
         CopyOnWriteArrayList<Token> tokens = new CopyOnWriteArrayList<>();
         Random random = new Random();
         int n = 0;
-        while (n < 3) {
-            for (int index1 = 1; index1 <= 10; index1++) {
-                int index2 = (index1 % 10) + 1; // tn, tn+1
+        while (n < 4) {
+            for (int index1 = 1; index1 <= 50; index1++) {
+                int index2 = (index1 % 50) + 1; // tn, tn+1
                 tokens.add(new Token(index1, index2));
             }
             n++;

@@ -49,11 +49,10 @@ public class Game implements Runnable {
     @Override
     public void run() {
         int numTokens = board.getTokens().size();
-        int numPlayers = players.size();
         int totalTokensExtracted = 0;
         List<Thread> threads = new ArrayList<>();
 
-        while (totalTokensExtracted < numTokens - numPlayers) {
+        while (totalTokensExtracted < numTokens) {
             for (Player player : players) {
                 Thread thread = new Thread(player);
                 threads.add(thread);
@@ -87,11 +86,12 @@ public class Game implements Runnable {
                 winners.add(player);
             }
         }
-        System.out.println("Winner(s): ");
+        System.out.println("Winner(s)" + " with a score of " + scorMaxim +" :");
         for (Player player : winners) {
-            System.out.println(player.getName() + " with a score of " + scorMaxim);
+            System.out.println(player.getName());
             System.out.println(player.getValues());
         }
+        System.out.println("-----------------------------");
         System.out.println("Loser(s): ");
         for (Player player : losers) {
             System.out.println(player.getName());
