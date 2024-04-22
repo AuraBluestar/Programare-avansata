@@ -75,12 +75,12 @@ public class Game implements Runnable {
         List<Player> losers = new ArrayList();
         int scorMaxim = 0;
         for (Player player : players) {
-            if (player.getLongestIteration() > scorMaxim) {
+            if (player.longestConsecutiveSequence()> scorMaxim) {
                 losers.addAll(winners);
                 winners = new ArrayList();
                 winners.add(player);
-                scorMaxim = player.getLongestIteration();
-            } else if (player.getLongestIteration() < scorMaxim) {
+                scorMaxim = player.longestConsecutiveSequence();
+            } else if (player.longestConsecutiveSequence() < scorMaxim) {
                 losers.add(player);
             } else {
                 winners.add(player);
@@ -89,7 +89,7 @@ public class Game implements Runnable {
         System.out.println("Winner(s)" + " with a score of " + scorMaxim +" :");
         for (Player player : winners) {
             System.out.println(player.getName());
-            System.out.println(player.getValues());
+            System.out.println(player.getTokenList());
         }
         System.out.println("-----------------------------");
         System.out.println("Loser(s): ");
