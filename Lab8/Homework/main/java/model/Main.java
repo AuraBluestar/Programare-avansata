@@ -32,7 +32,7 @@ public class Main {
         AuthorsDAO authorDAO = new AuthorsDAO();
         authorDAO.getAuthors();
         CSVReader csvReader = new CSVReader();
-        csvReader.setSource("D://db//IMDb_movies.csv");
+        csvReader.setSource("C:\\Users\\mirel\\OneDrive\\Desktop\\FACULTATE\\java\\Lab8\\lib\\books.csv\\books.csv");
         csvReader.setSeparator(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
         ImportFromCSV importFromCSV = new ImportFromCSV(csvReader);
         bookDAO.importBooks(importFromCSV);
